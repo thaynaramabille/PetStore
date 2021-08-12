@@ -1,0 +1,48 @@
+// 1 - Pacote
+package petstore;
+
+// 2 - Bibliotecas
+
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import static io.restassured.RestAssured.given;
+
+// 3 - Classes
+public class Pet {
+    // 3.1 - Atributos
+    String uri = "https://petstore.swagger.io/v2/pet"; //endereço da entidade pet
+
+    // 3.2 - Métodos e Funções
+    public String lerJson(String caminhoJson) throws IOException {  //le o arquivo de onde ele vai tirar os dados
+        return new String(Files.readAllBytes(Paths.get(caminhoJson)));
+    }
+
+    // Incluir - Create - Post
+
+    // uma classe void executa sem retorno
+    @Test //identifica o método ou função como um teste para o TestNG
+    public void incluirPet() throws IOException {
+        String jsonBody = lerJson("dbJson/pet1.json"); //chama a função que vai ler, passando o caminho do arquivo
+
+        // Sintaxe Gherkin
+        // Dado - Quando - Então
+        //Given - When - Then
+
+        given() //dado - pré condição
+                .contentType("application/json") //comum em API REST - antigas era "text/xml"
+                .log().all() //pede pra logar - envio - ida
+                .body(jsonBody) //fala a informação que vai ser transmitida
+        .when() //quando
+                .post(uri)
+        .then() //entao
+                .log().all() //volta
+                .statusCode(200) //verificar se a transação foi e voltou
+        ;
+
+    }
+
+}

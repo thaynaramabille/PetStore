@@ -10,8 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.contains;
 
 // 3 - Classes
 public class Pet {
@@ -45,6 +45,8 @@ public class Pet {
                 .statusCode(200) //verificar se a transação foi e voltou - so significa que a mensagem foi e voltou
                 .body("name",  is("Maggie"))
                 .body("status", is("available"))
+                .body("category.name", is("dog")) //quando tenho informação sem colchetes, eu posso utilizar o "is"
+                .body("tags.name", contains("sta")) //se tiver informação dentro de colchetes, entao utilizar "contains"
         ;
 
     }

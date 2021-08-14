@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-14T15:10:39" hostname="DESKTOP-BGC2PE7" time="21.024">
+<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-14T15:23:35" hostname="DESKTOP-BGC2PE7" time="19.018">
   <properties/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="21.024"/>
+  <testcase name="incluirPet" classname="petstore.Pet" time="19.018"/>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -18,7 +18,7 @@ Body:
     "id": 3010199400,
     "category": {
         "id": 1,
-        "name": "Dog"
+        "name": "dog"
     },
     "name": "Maggie",
     "photoUrls": [
@@ -33,7 +33,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Sat, 14 Aug 2021 15:10:52 GMT
+Date: Sat, 14 Aug 2021 15:23:47 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -46,7 +46,7 @@ Server: Jetty(9.2.9.v20150224)
     "id": 3010199400,
     "category": {
         "id": 1,
-        "name": "Dog"
+        "name": "dog"
     },
     "name": "Maggie",
     "photoUrls": [

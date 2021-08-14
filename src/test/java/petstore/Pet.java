@@ -26,7 +26,7 @@ public class Pet {
     // Incluir - Create - Post
 
     // uma classe void(nao retorna nada) executa sem retorno
-    @Test //identifica o método ou função como um teste para o TestNG
+    @Test(priority = 1) //identifica o método ou função como um teste para o TestNG
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("dbJson/pet1.json"); //chama a função que vai ler, passando o caminho do arquivo
 
@@ -45,9 +45,33 @@ public class Pet {
                 .statusCode(200) //verificar se a transação foi e voltou - so significa que a mensagem foi e voltou
                 .body("name",  is("Maggie"))
                 .body("status", is("available"))
-                .body("category.name", is("dog")) //quando tenho informação sem colchetes, eu posso utilizar o "is"
+                .body("category.name", is("XEKAOI")) //quando tenho informação sem colchetes, eu posso utilizar o "is"
                 .body("tags.name", contains("sta")) //se tiver informação dentro de colchetes, entao utilizar "contains"
         ;
+
+    }
+    @Test(priority = 2)
+    public void consultarPet(){
+        String petId = "3010199400";
+        String token =
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + petId)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is ("Maggie"))
+                .body("category.name", is("XEKAOI"))
+                .body("status", is("available"))
+        .extract()
+                .path("category.name")
+
+        ;
+
+        System.out.print("O token e " + token);
 
     }
 

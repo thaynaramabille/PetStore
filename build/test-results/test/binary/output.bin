@@ -11,7 +11,7 @@
 Multiparts:		<none>
 Body:
 {
-    "id": 0,
+    "id": 3010199400,
     "category": {
         "id": 1,
         "name": "Dog"
@@ -31,7 +31,7 @@
     "status": "available"
 }
 HTTP/1.1 200 OK
-%Date: Sat, 14 Aug 2021 14:33:29 GMT
+%Date: Sat, 14 Aug 2021 15:10:52 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -41,7 +41,7 @@
  Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 9223372036854775807,
+    "id": 3010199400,
     "category": {
         "id": 1,
         "name": "Dog"

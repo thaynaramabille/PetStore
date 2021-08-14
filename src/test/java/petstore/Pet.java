@@ -10,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 
 // 3 - Classes
 public class Pet {
@@ -23,14 +25,14 @@ public class Pet {
 
     // Incluir - Create - Post
 
-    // uma classe void executa sem retorno
+    // uma classe void(nao retorna nada) executa sem retorno
     @Test //identifica o método ou função como um teste para o TestNG
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("dbJson/pet1.json"); //chama a função que vai ler, passando o caminho do arquivo
 
         // Sintaxe Gherkin
         // Dado - Quando - Então
-        //Given - When - Then
+        // Given - When - Then
 
         given() //dado - pré condição
                 .contentType("application/json") //comum em API REST - antigas era "text/xml"
@@ -40,7 +42,9 @@ public class Pet {
                 .post(uri)
         .then() //entao
                 .log().all() //volta
-                .statusCode(200) //verificar se a transação foi e voltou
+                .statusCode(200) //verificar se a transação foi e voltou - so significa que a mensagem foi e voltou
+                .body("name",  is("Maggie"))
+                .body("status", is("available"))
         ;
 
     }

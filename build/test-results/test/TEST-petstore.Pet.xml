@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-14T21:05:11" hostname="DESKTOP-BGC2PE7" time="11.552">
+<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-15T16:19:13" hostname="DESKTOP-BGC2PE7" time="17.898">
   <properties/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="10.351"/>
-  <testcase name="consultarPet" classname="petstore.Pet" time="1.194"/>
-  <system-out><![CDATA[Request method:	POST
+  <testcase name="alterarPet" classname="petstore.Pet" time="17.898"/>
+  <system-out><![CDATA[Request method:	PUT
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
@@ -31,10 +30,10 @@ Body:
             "name": "sta"
         }
     ],
-    "status": "available"
+    "status": "sold"
 }
 HTTP/1.1 200 OK
-Date: Sat, 14 Aug 2021 21:05:18 GMT
+Date: Sun, 15 Aug 2021 16:19:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -59,48 +58,8 @@ Server: Jetty(9.2.9.v20150224)
             "name": "sta"
         }
     ],
-    "status": "available"
+    "status": "sold"
 }
-Request method:	GET
-Request URI:	https://petstore.swagger.io/v2/pet/3010199400
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Sat, 14 Aug 2021 21:05:22 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-Server: Jetty(9.2.9.v20150224)
-
-{
-    "id": 3010199400,
-    "category": {
-        "id": 1,
-        "name": "XEKAOI"
-    },
-    "name": "Maggie",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 2021,
-            "name": "sta"
-        }
-    ],
-    "status": "available"
-}
-O token e XEKAOI]]></system-out>
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

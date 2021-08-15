@@ -1,0 +1,18 @@
+{
+  "id": 3010199400,
+  "category": {
+    "id": 1,
+    "name": "XEKAOI"
+  },
+  "name": "Maggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2021,
+      "name": "sta"
+    }
+  ],
+  "status": "sold"
+}

@@ -1,8 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-15T16:19:13" hostname="DESKTOP-BGC2PE7" time="17.898">
+<testsuite name="petstore.Pet" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-15T16:41:32" hostname="DESKTOP-BGC2PE7" time="23.464">
   <properties/>
-  <testcase name="alterarPet" classname="petstore.Pet" time="17.898"/>
-  <system-out><![CDATA[Request method:	PUT
+  <testcase name="incluirPet" classname="petstore.Pet" time="19.471"/>
+  <testcase name="consultarPet" classname="petstore.Pet" time="1.664"/>
+  <testcase name="alterarPet" classname="petstore.Pet" time="1.164"/>
+  <testcase name="excluirPet" classname="petstore.Pet" time="1.105"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 3010199400,
+    "category": {
+        "id": 1,
+        "name": "XEKAOI"
+    },
+    "name": "Maggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2021,
+            "name": "sta"
+        }
+    ],
+    "status": "available"
+}
+HTTP/1.1 200 OK
+Date: Sun, 15 Aug 2021 16:41:46 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 3010199400,
+    "category": {
+        "id": 1,
+        "name": "XEKAOI"
+    },
+    "name": "Maggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2021,
+            "name": "sta"
+        }
+    ],
+    "status": "available"
+}
+Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/pet/3010199400
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 15 Aug 2021 16:41:53 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 3010199400,
+    "category": {
+        "id": 1,
+        "name": "XEKAOI"
+    },
+    "name": "Maggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2021,
+            "name": "sta"
+        }
+    ],
+    "status": "available"
+}
+O token é XEKAOIRequest method:	PUT
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
@@ -33,7 +134,7 @@ Body:
     "status": "sold"
 }
 HTTP/1.1 200 OK
-Date: Sun, 15 Aug 2021 16:19:26 GMT
+Date: Sun, 15 Aug 2021 16:41:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -59,6 +160,33 @@ Server: Jetty(9.2.9.v20150224)
         }
     ],
     "status": "sold"
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/pet/3010199400
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 15 Aug 2021 16:41:56 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "3010199400"
 }
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

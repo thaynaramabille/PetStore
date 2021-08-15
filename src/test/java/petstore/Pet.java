@@ -26,7 +26,7 @@ public class Pet {
     // Incluir - Create - Post
 
     // uma classe void(nao retorna nada) executa sem retorno
-    @Test(priority = 1) //identifica o método ou função como um teste para o TestNG
+    @Test (priority = 1) //identifica o método ou função como um teste para o TestNG
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("dbJson/pet1.json"); //chama a função que vai ler, passando o caminho do arquivo
 
@@ -50,7 +50,7 @@ public class Pet {
         ;
 
     }
-    @Test(priority = 2)
+    @Test (priority = 2)
     public void consultarPet(){
         String petId = "3010199400";
         String token =
@@ -74,7 +74,8 @@ public class Pet {
         System.out.print("O token é " + token);
 
     }
-    @Test(priority = 3)
+
+    @Test (priority = 3)
     public void alterarPet() throws IOException {
         String jsonbody = lerJson("dbJson/pet2.json");
 
@@ -91,5 +92,25 @@ public class Pet {
                 .body("status", is("sold"))
         ;
     }
+
+    @Test (priority = 4)
+    public void excluirPet(){
+        String petId = "3010199400";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .delete(uri + "/" + petId)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("code", is(200))
+                .body("type", is("unknown"))
+                .body("message", is(petId))
+        ;
+
+    }
+
 
 }

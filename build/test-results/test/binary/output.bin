@@ -1,4 +1,4 @@
-Request method:	PUT
+Request method:	POST
 1Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
@@ -28,10 +28,10 @@
 
         }
     ],
-    "status": "sold"
+    "status": "available"
 }
 HTTP/1.1 200 OK
-%Date: Sun, 15 Aug 2021 16:19:26 GMT
+%Date: Sun, 15 Aug 2021 16:41:46 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -58,5 +58,136 @@
 
         }
     ],
-    "status": "sold"
+    "status": "available"
 }
+Request method:	GET
+<Request URI:	https://petstore.swagger.io/v2/pet/3010199400
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sun, 15 Aug 2021 16:41:53 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 3010199400,
+    "category": {
+        "id": 1,
+        "name": "XEKAOI"
+    },
+    "name": "Maggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "available"
+}
+O token é XEKAOIRequest method:	PUT
+1Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 3010199400,
+    "category": {
+        "id": 1,
+        "name": "XEKAOI"
+    },
+    "name": "Maggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "sold"
+}
+HTTP/1.1 200 OK
+%Date: Sun, 15 Aug 2021 16:41:54 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 3010199400,
+    "category": {
+        "id": 1,
+        "name": "XEKAOI"
+    },
+    "name": "Maggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "sold"
+}
+Request method:	DELETE
+<Request URI:	https://petstore.swagger.io/v2/pet/3010199400
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sun, 15 Aug 2021 16:41:56 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "3010199400"
+}
